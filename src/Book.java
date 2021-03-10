@@ -9,5 +9,14 @@ public class Book {
         price = newPrice;
         isbn = newIsbn;
     }
+    public String getName() {
+        return name;
+    }
+    public double getPrice() {
+        return price;
+    }
+    public String getIsbn() {
+        return isbn;
+    }
 
 }
