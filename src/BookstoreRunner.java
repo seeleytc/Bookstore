@@ -1,12 +1,13 @@
+import java.util.Scanner;
 public class BookstoreRunner {
     private static Book[] availableBooks = new Book[10];
     public static void main(String[] args) {
         populateAvailableBooks();
         listAvailableBooks();
-        determineBookSelection();
+        determineAvailableBooks();
 
     }
-    public void populateAvailableBooks() {
+    public static void populateAvailableBooks() {
         Book b1 = new Book("Tom and Jerry", 19.99, "000034457");
         Book b2 = new Book( "Learn Java", 1.87, "000045643");
         Book b3 = new Book("Bible", 24.67, "000035678");
@@ -34,12 +35,18 @@ public class BookstoreRunner {
 
 
     }
-    public void listAvailableBooks() {
-
+    public static void listAvailableBooks() {
+        for (Book book : availableBooks) {
+            System.out.println(book.getName());
+            System.out.println(book.getPrice());
+            System.out.println(book.getIsbn());
+            System.out.println("");
+        }
     }
-    public void determineBookSelection() {
-
-    }
-
+    public static void determineAvailableBooks() {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Welcome to the book store, please select a book");
+    String One = myObj.nextLine();
+    System.out.println("Thank you, your purchase is complete");
 }
-
+}
